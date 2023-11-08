@@ -116,8 +116,8 @@ module usb_cdc_wrapper_ahbl (
 	wire		_gclk_;
 	wire		_clk_	= HCLK;
 	wire		_rst_	= ~HRESETn;
-	wire		rd	= (ahbl_re & (last_HADDR[15:0]==RXDATA_REG_ADDR));
-	wire		wr	= (ahbl_we & (last_HADDR[15:0]==TXDATA_REG_ADDR));
+	wire		rx_fifo_rd	= (ahbl_re & (last_HADDR[15:0]==RXDATA_REG_ADDR));
+	wire		tx_fifo_wr	= (ahbl_we & (last_HADDR[15:0]==TXDATA_REG_ADDR));
 	wire[7:0]	tx_fifo_wdata	= HWDATA[7:0];
 
 	assign _gclk_ = _clk_;
