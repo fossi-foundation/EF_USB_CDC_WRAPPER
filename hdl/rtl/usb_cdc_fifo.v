@@ -81,7 +81,7 @@ module usb_cdc_fifo (
     USB_CDC_FIFO rx_fifo (
         .clk(clk),
         .rst_n(rst_n),
-        .rd(rx_fifo_read),
+        .rd(rx_fifo_rd),
         .wr(out_valid_o),  
         .w_data(out_data_o),  //data recieved from usb cdc 
         .empty(rx_fifo_empty),
