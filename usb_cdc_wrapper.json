@@ -1,6 +1,6 @@
 {
     "info": {
-        "name": "USB_CDC_FIFO",
+        "name": "usb_cdc_wrapper",
         "description": "Bus wrapper for usb cdc which utilizes fifo",
         "repo": "https://github.com/efabless/usb_cdc_fifo",
         "owner": "Efabless Corp.",
@@ -183,6 +183,14 @@
         {
             "name": "rx_above_flag",
             "port": "rx_fifo_level_above"
+        },
+        {
+            "name": "rx_empty_flag",
+            "port": "rx_fifo_empty"
+        },
+        {
+            "name": "tx_full_flag",
+            "port": "tx_fifo_full"
         }
     ],
     "clock": "clk",
@@ -204,7 +212,7 @@
       {"name": "tx_fifo_level", "size": "4"},
       {"name": "tx_fifo_wdata", "size": "8"},
       {"name": "tx_fifo_th", "size": "4"},
-      {"name": "tx_level_below", "size": "1"},
+      {"name": "tx_fifo_level_below", "size": "1"},
       {"name": "dp_pu_o", "size": "1"},
       {"name": "dp_rx_i", "size": "1"},
       {"name": "dn_rx_i", "size": "1"},
