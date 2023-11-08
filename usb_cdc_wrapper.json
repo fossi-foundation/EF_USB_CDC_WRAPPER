@@ -2,7 +2,7 @@
     "info": {
         "name": "usb_cdc_wrapper",
         "description": "Bus wrapper for usb cdc which utilizes fifo",
-        "repo": "https://github.com/efabless/usb_cdc_fifo",
+        "repo": "https://github.com/efabless/usb_cdc_wrapper",
         "owner": "Efabless Corp.",
         "license": "APACHE 2.0",
         "author": "Mohamed Shalan",
