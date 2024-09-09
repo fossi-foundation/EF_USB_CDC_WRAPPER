@@ -36,6 +36,7 @@ module usb_cdc_wrapper_ahbl (
 	output	wire 		dn_tx_o,
 	output	wire 		tx_en_o,
 	input	wire 		HCLK,
+	input   wire        usb_cdc_clk_48MHz,
 	input	wire 		HRESETn,
 	input	wire [31:0]	HADDR,
 	input	wire 		HWRITE,
@@ -124,6 +125,7 @@ module usb_cdc_wrapper_ahbl (
 
 	usb_cdc_wrapper inst_to_wrap (
 		.clk(_gclk_),
+		.usb_cdc_clk_48MHz(usb_cdc_clk_48MHz),
 		.rst_n(~_rst_),
 		.rx_fifo_rd(rx_fifo_rd),
 		.rx_fifo_full(rx_fifo_full),

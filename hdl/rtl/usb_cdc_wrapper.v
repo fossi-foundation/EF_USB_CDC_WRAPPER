@@ -1,6 +1,7 @@
 module usb_cdc_wrapper (
 
     input wire              clk,
+    input wire              usb_cdc_clk_48MHz,
     input wire              rst_n,
 
     input wire              rx_fifo_rd,
@@ -54,16 +55,12 @@ module usb_cdc_wrapper (
              .IN_BULK_MAXPACKETSIZE('d8),
              .OUT_BULK_MAXPACKETSIZE('d8),
              .BIT_SAMPLES(BIT_SAMPLES),
-             //.USE_APP_CLK(1),
-             //.APP_CLK_RATIO(BIT_SAMPLES*12/2))  // BIT_SAMPLES * 12MHz / 2MHz
-             .USE_APP_CLK(0))
+             .USE_APP_CLK(1),
+             .APP_CLK_RATIO(2))  // 48/24 MHz
    u_usb_cdc (.frame_o(),
               .configured_o(),
-              //.app_clk_i(clk_2mhz),
-              //.clk_i(clk_pll),
-              .app_clk_i(1'b0),
-              //.clk_i(clk_48MHz),
-              .clk_i(clk),
+              .app_clk_i(clk), // 24 MHz
+              .clk_i(usb_cdc_clk_48MHz), //48 MHz
               .rstn_i(rst_n),
               .out_ready_i(out_ready_i),
               .in_data_i(in_data_i),
