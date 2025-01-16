@@ -1,1 +1,1 @@
-# usb_cdc_fifo
+# EF_USB_CDC_WRAPPER
