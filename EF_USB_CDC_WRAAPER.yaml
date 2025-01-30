@@ -179,16 +179,16 @@ registers:
     
 flags:
   - name: TXE
-    port: tx_empty
+    port: tx_fifo_empty
     description: Transmit FIFO is Empty.
   - name: TXB
-    port: tx_level_below
+    port: tx_fifo_level_below
     description: Transmit FIFO level is Below Threshold.
   - name: RXF
-    port: rx_full
+    port: rx_fifo_full
     description: Receive FIFO is Full.
   - name: RXA
-    port: rx_level_above
+    port: rx_fifo_level_above
     description: Receive FIFO level is Above Threshold.
   - name: RXE
     port: rx_fifo_empty

@@ -1,6 +1,6 @@
 # EF_USB_CDC_WRAPPER
 
-AHBL and APB bus wrappers with transmit and receive FIFOs for the verilog implementation for usb cdc in [ulixxe/usb_cdc](https://github.com/efabless/usb_cdc) repository
+AHBL and APB bus wrappers with transmit and receive FIFOs for the verilog implementation of usb cdc in [ulixxe/usb_cdc](https://github.com/efabless/usb_cdc) repository
 ## The wrapped IP
 
 
